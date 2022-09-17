@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body{
+            min-height: 100vh;
+            background-color: #000;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .spinner-box{
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .circle-border{
+            width: 150px;
+            height: 150px;
+            padding: 3px;
+            display: flex;
+            justify-self: center;
+            align-items: center;
+            border-radius: 50%;
+            background: linear-gradient(0deg, rgb(0 0 0 / 0%) 33%, rgb(95, 2, 245) 100%);
+            animation: spin 0.8s linear infinite;
+        }
+        .circle-core{
+            width: 120px;
+            height: 120px;
+            background: black;
+            border-radius: 50%;
+
+        }p{
+            position: absolute;
+        }
+        @keyframes spin {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="spinner-box">
+        <div class="circle-border">
+            <div class="circle-core"></div>
+        </div>
+        <p>Loading...</p>
+    </div>
+</body>
+</html>
